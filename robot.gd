@@ -27,14 +27,17 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
 	# Check if there is a direction, velocity is below max
-	if direction and velocity.x * direction < MAX_SPEED and (not(sign(velocity.x) and sign(direction)) or sign(velocity.x) == sign(direction)):
-		velocity.x += direction * ACCELERATION
-		# Handle sprite direction
-		if direction == 1:
-			sprite.flip_h = false
-		else:
-			sprite.flip_h = true
+	if direction and (not(sign(velocity.x) and sign(direction)) or sign(velocity.x) == sign(direction)):
+		if velocity.x * direction < MAX_SPEED:
+			velocity.x += direction * ACCELERATION
+			# Handle sprite animation
+			sprite.play("walk")
+			if direction == 1:
+				sprite.flip_h = false
+			else:
+				sprite.flip_h = true
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION)
+		sprite.play("default")
 	
 	move_and_slide()
