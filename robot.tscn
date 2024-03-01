@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpiubspm00q5b"]
+[gd_scene load_steps=5 format=3 uid="uid://dpiubspm00q5b"]
 
-[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/placeholder_character.png" id="1_tfg21"]
+[ext_resource type="Script" path="res://robot.gd" id="1_ypht3"]
+[ext_resource type="Texture2D" uid="uid://dvrem4jnlfv1o" path="res://assets/robot.png" id="2_bx4sa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cb5vl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tfg21")
+"texture": ExtResource("2_bx4sa")
 }],
 "loop": true,
 "name": &"default",
@@ -17,6 +18,8 @@ animations = [{
 radius = 13.0
 
 [node name="robot" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_ypht3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

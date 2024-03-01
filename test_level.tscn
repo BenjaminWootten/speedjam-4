@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://dthmyky8xonc0"]
+[gd_scene load_steps=4 format=3 uid="uid://dthmyky8xonc0"]
+
+[ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://robot.tscn" id="1_enb35"]
+[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/black_box.png" id="2_58my3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od1j2"]
+size = Vector2(426, 27)
 
 [node name="test_level" type="Node2D"]
+
+[node name="robot" parent="." instance=ExtResource("1_enb35")]
+position = Vector2(543, 168)
+
+[node name="Camera2D" type="Camera2D" parent="robot"]
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(557, 597)
+scale = Vector2(4.44, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_od1j2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0.250023, 0)
+scale = Vector2(17.7344, 1)
+texture = ExtResource("2_58my3")
