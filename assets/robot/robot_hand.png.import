@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvrem4jnlfv1o"
-path="res://.godot/imported/robot.png-b6fddb60c90fb955abb72fff30db5342.ctex"
+uid="uid://cfpq1lnovgk8q"
+path="res://.godot/imported/robot_hand.png-e25bfc1d71ad386f02bb5eb0832da168.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/robot.png"
-dest_files=["res://.godot/imported/robot.png-b6fddb60c90fb955abb72fff30db5342.ctex"]
+source_file="res://assets/robot/robot_hand.png"
+dest_files=["res://.godot/imported/robot_hand.png-e25bfc1d71ad386f02bb5eb0832da168.ctex"]
 
 [params]
 

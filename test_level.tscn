@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dthmyky8xonc0"]
+[gd_scene load_steps=5 format=3 uid="uid://dthmyky8xonc0"]
 
 [ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://robot.tscn" id="1_enb35"]
-[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/black_box.png" id="2_58my3"]
+[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/level/black_box.png" id="2_58my3"]
+[ext_resource type="PackedScene" uid="uid://mw1rbgi0ahne" path="res://rising_water.tscn" id="3_bkoy2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_od1j2"]
 size = Vector2(426, 27)
@@ -67,3 +68,5 @@ texture_filter = 1
 position = Vector2(0.250023, 0)
 scale = Vector2(17.7344, 1)
 texture = ExtResource("2_58my3")
+
+[node name="Area2D" parent="." instance=ExtResource("3_bkoy2")]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mw1rbgi0ahne"]
+
+[ext_resource type="Script" path="res://water.gd" id="3_251ui"]
+[ext_resource type="Texture2D" uid="uid://c7eyvgmhrawx2" path="res://assets/level/water.png" id="4_myahu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqv0d"]
+size = Vector2(1922.5, 259.5)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("3_251ui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(575.75, 996.25)
+shape = SubResource("RectangleShape2D_tqv0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 998)
+texture = ExtResource("4_myahu")
