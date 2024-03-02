@@ -12,6 +12,7 @@ const GRAPPLE_VELOCITY = 10.0
 
 var grappling = false
 var grapple_point
+var grapple_length
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -32,13 +33,13 @@ func _physics_process(delta):
 		if collision:
 			grappling = true
 			grapple_point = collision
+			grapple_length = global_position.distance_to(grapple_point)
 	
 	if Input.is_action_just_released("grapple"):
 		grappling = false
 	
 	if grappling:
-		self.position.x = move_toward(position.x, grapple_point.x, GRAPPLE_VELOCITY)
-		self.position.y = move_toward(position.y, grapple_point.y, GRAPPLE_VELOCITY)
+		swing(delta)
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -59,3 +60,14 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func swing(delta):
+	var radius = global_position - grapple_point
+	if radius.length() > 10 and velocity.length() > 0.01:
+		var angle = acos(radius.dot(velocity) / (radius.length() * velocity.length()))
+		var rad_vel = cos(angle) * velocity.length()
+		velocity += radius.normalized() * -rad_vel
+		
+		if global_position.distance_to(grapple_point) > grapple_length:
+			global_position = grapple_point + radius.normalized() * grapple_length
+		
+		velocity += (grapple_point - global_position).normalized() * 15000 * delta
