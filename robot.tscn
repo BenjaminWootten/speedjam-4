@@ -133,4 +133,4 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_2388t")
 
 [node name="grapple" parent="." instance=ExtResource("5_d5l8x")]
-position = Vector2(-6.5, 9.5)
+position = Vector2(-7.5, 8)
