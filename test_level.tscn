@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://robot.tscn" id="1_enb35"]
 [ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/level/black_box.png" id="2_58my3"]
-[ext_resource type="PackedScene" uid="uid://mw1rbgi0ahne" path="res://rising_water.tscn" id="3_bkoy2"]
+[ext_resource type="PackedScene" uid="uid://c8fbbud4fruog" path="res://rising_water.tscn" id="3_bkoy2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_od1j2"]
 size = Vector2(426, 27)
