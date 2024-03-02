@@ -8,7 +8,7 @@ const ACCELERATION = 20.0
 const DECELERATION = 50.0
 const JUMP_VELOCITY = -600.0
 const GRAPPLE_ACCELERATION = 40.0
-const GRAPPLE_VELOCITY = 400.0
+const GRAPPLE_VELOCITY = 10.0
 
 var grappling = false
 var grapple_point
@@ -37,7 +37,8 @@ func _physics_process(delta):
 		grappling = false
 	
 	if grappling:
-		var grapple_direction = Vector2(sign(grapple_point.x - self.position.x),  sign(self.position.y - grapple_point.y))
+		self.position.x = move_toward(position.x, grapple_point.x, GRAPPLE_VELOCITY)
+		self.position.y = move_toward(position.y, grapple_point.y, GRAPPLE_VELOCITY)
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
