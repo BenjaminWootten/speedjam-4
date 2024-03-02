@@ -12,6 +12,11 @@ rotation = -1.5708
 target_position = Vector2(0, 200)
 collision_mask = 2
 
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0.435294, 0.435294, 0.435294, 1)
+
 [node name="hook" type="Sprite2D" parent="."]
 texture_filter = 1
 rotation = 1.5708
@@ -21,8 +26,3 @@ texture = ExtResource("2_mpt84")
 [node name="target" type="Sprite2D" parent="."]
 modulate = Color(0.882353, 0, 1, 0.537255)
 texture = ExtResource("3_6t8q6")
-
-[node name="Line2D" type="Line2D" parent="."]
-points = PackedVector2Array(0, 0, 0, 0)
-width = 1.0
-default_color = Color(0, 0, 0, 1)
