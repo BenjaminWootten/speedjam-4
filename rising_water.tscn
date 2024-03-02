@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_tqv0d")
 [node name="water bottom" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.560784)
 texture_filter = 1
-position = Vector2(480, 1079)
+position = Vector2(480, 1083)
 scale = Vector2(59.9375, 12.125)
 texture = ExtResource("3_md4le")
 
