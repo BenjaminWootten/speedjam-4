@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dthmyky8xonc0"]
+[gd_scene load_steps=17 format=3 uid="uid://dthmyky8xonc0"]
 
 [ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://robot.tscn" id="1_enb35"]
 [ext_resource type="Texture2D" uid="uid://8v1m6ycd3r4u" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer01.png" id="2_4cybm"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="8_1cwee"]
 [ext_resource type="PackedScene" uid="uid://cd148tr2cjqxa" path="res://building scenes/blackbuildingtile.tscn" id="9_8io2j"]
 [ext_resource type="PackedScene" uid="uid://bpjod2qyc33yr" path="res://building scenes/blackbottom.tscn" id="10_cf80q"]
+[ext_resource type="PackedScene" uid="uid://n1gbr5cvcq6g" path="res://building scenes/bluetop.tscn" id="11_r2wh4"]
 [ext_resource type="PackedScene" uid="uid://d2j1oaurn72s4" path="res://building scenes/bluebuildingtile.tscn" id="11_r788p"]
 [ext_resource type="PackedScene" uid="uid://bkt8yi6s2tm1m" path="res://building scenes/bluebottom.tscn" id="12_1is54"]
 
@@ -120,39 +121,42 @@ centered = false
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="rightwall" type="Node2D" parent="Walls"]
-position = Vector2(2200, 0)
+position = Vector2(1865, 0)
 
 [node name="top" parent="Walls/rightwall" instance=ExtResource("8_1cwee")]
-position = Vector2(195, -2621)
+position = Vector2(195, -2616)
 
 [node name="1" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
-position = Vector2(192, 121)
+position = Vector2(192, 128)
 
 [node name="2" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
-position = Vector2(192, -2181)
+position = Vector2(192, -2176)
 
 [node name="3" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
-position = Vector2(192, -1415)
+position = Vector2(192, -1408)
 
 [node name="4" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
-position = Vector2(192, -647)
+position = Vector2(192, -640)
 
 [node name="bottom" parent="Walls/rightwall" instance=ExtResource("10_cf80q")]
-position = Vector2(192, 564)
+position = Vector2(192, 572)
 
 [node name="leftwall" type="Node2D" parent="Walls"]
 
+[node name="top" parent="Walls/leftwall" instance=ExtResource("11_r2wh4")]
+position = Vector2(-126, -2616)
+
 [node name="1" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
-position = Vector2(-121, 120)
+position = Vector2(-121, 128)
 
 [node name="2" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
-position = Vector2(-121, 120)
+position = Vector2(-121, -2176)
 
 [node name="3" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
-position = Vector2(-121, 120)
+position = Vector2(-121, -1408)
 
 [node name="4" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
-position = Vector2(-121, 120)
+position = Vector2(-121, -640)
 
 [node name="bottom" parent="Walls/leftwall" instance=ExtResource("12_1is54")]
 position = Vector2(-121, 572)
