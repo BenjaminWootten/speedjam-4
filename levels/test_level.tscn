@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://dthmyky8xonc0"]
+
+[ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://character/robot.tscn" id="1_5peiq"]
+[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/level/black_box.png" id="2_cvbwg"]
+[ext_resource type="PackedScene" uid="uid://c8fbbud4fruog" path="res://level resources/rising_water.tscn" id="3_mbusc"]
+[ext_resource type="PackedScene" uid="uid://bnwgh14f16e7p" path="res://level resources/background.tscn" id="4_8fdj4"]
+[ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="8_vt3ew"]
+[ext_resource type="PackedScene" uid="uid://cd148tr2cjqxa" path="res://building scenes/blackbuildingtile.tscn" id="9_krkwq"]
+[ext_resource type="PackedScene" uid="uid://bpjod2qyc33yr" path="res://building scenes/blackbottom.tscn" id="10_25jih"]
+[ext_resource type="PackedScene" uid="uid://n1gbr5cvcq6g" path="res://building scenes/bluetop.tscn" id="11_pxgv8"]
+[ext_resource type="PackedScene" uid="uid://d2j1oaurn72s4" path="res://building scenes/bluebuildingtile.tscn" id="12_bqpju"]
+[ext_resource type="PackedScene" uid="uid://bkt8yi6s2tm1m" path="res://building scenes/bluebottom.tscn" id="13_ae1qj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od1j2"]
+size = Vector2(426, 27)
+
+[node name="test_level" type="Node2D"]
+
+[node name="robot" parent="." instance=ExtResource("1_5peiq")]
+position = Vector2(960, 540)
+
+[node name="Camera2D" type="Camera2D" parent="robot"]
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(258, 97)
+scale = Vector2(6.01898, -1.69316)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(117.692, -327.252)
+shape = SubResource("RectangleShape2D_od1j2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture_filter = 1
+position = Vector2(117.942, -327.252)
+scale = Vector2(17.7344, 1)
+texture = ExtResource("2_cvbwg")
+
+[node name="Area2D" parent="." instance=ExtResource("3_mbusc")]
+visible = false
+
+[node name="Background" parent="." instance=ExtResource("4_8fdj4")]
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="rightwall" type="Node2D" parent="Walls"]
+position = Vector2(1865, 0)
+
+[node name="top" parent="Walls/rightwall" instance=ExtResource("8_vt3ew")]
+position = Vector2(195, -2616)
+
+[node name="1" parent="Walls/rightwall" instance=ExtResource("9_krkwq")]
+position = Vector2(192, 128)
+
+[node name="2" parent="Walls/rightwall" instance=ExtResource("9_krkwq")]
+position = Vector2(192, -2176)
+
+[node name="3" parent="Walls/rightwall" instance=ExtResource("9_krkwq")]
+position = Vector2(192, -1408)
+
+[node name="4" parent="Walls/rightwall" instance=ExtResource("9_krkwq")]
+position = Vector2(192, -640)
+
+[node name="bottom" parent="Walls/rightwall" instance=ExtResource("10_25jih")]
+position = Vector2(192, 572)
+
+[node name="leftwall" type="Node2D" parent="Walls"]
+
+[node name="top" parent="Walls/leftwall" instance=ExtResource("11_pxgv8")]
+position = Vector2(-126, -2616)
+
+[node name="1" parent="Walls/leftwall" instance=ExtResource("12_bqpju")]
+position = Vector2(-121, 128)
+
+[node name="2" parent="Walls/leftwall" instance=ExtResource("12_bqpju")]
+position = Vector2(-121, -2176)
+
+[node name="3" parent="Walls/leftwall" instance=ExtResource("12_bqpju")]
+position = Vector2(-121, -1408)
+
+[node name="4" parent="Walls/leftwall" instance=ExtResource("12_bqpju")]
+position = Vector2(-121, -640)
+
+[node name="bottom" parent="Walls/leftwall" instance=ExtResource("13_ae1qj")]
+position = Vector2(-121, 572)

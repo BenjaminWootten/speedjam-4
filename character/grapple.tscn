@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://clto83m3jbc1q"]
 
-[ext_resource type="Script" path="res://grapple.gd" id="1_xok74"]
+[ext_resource type="Script" path="res://character/grapple.gd" id="1_xok74"]
 [ext_resource type="Texture2D" uid="uid://1mq07svx7kve" path="res://assets/robot/grapple.png" id="2_mpt84"]
 [ext_resource type="Texture2D" uid="uid://cepmnvn0fewau" path="res://assets/UI/target.png" id="3_6t8q6"]
 

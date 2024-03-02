@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnwgh14f16e7p"]
+
+[ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="1_6wg7r"]
+[ext_resource type="Texture2D" uid="uid://b7b3ifk8b1mxe" path="res://assets/level/background/SCS_Skyline_Daytime_Layer03.png" id="2_frw76"]
+[ext_resource type="Texture2D" uid="uid://cqwa3c6jdhjsx" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer02.png" id="3_o6wrs"]
+[ext_resource type="Texture2D" uid="uid://8v1m6ycd3r4u" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer01.png" id="4_3cgg1"]
+
+[sub_resource type="GDScript" id="GDScript_2o65a"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.y-=20*delta
+"
+
+[sub_resource type="GDScript" id="GDScript_0b0s2"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.x-=20*delta
+"
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = SubResource("GDScript_2o65a")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1920, 2880)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture = ExtResource("1_6wg7r")
+centered = false
+
+[node name="BG" type="ParallaxBackground" parent="."]
+script = SubResource("GDScript_0b0s2")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+position = Vector2(0, 200)
+motion_scale = Vector2(0.4, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="BG/ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_frw76")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+position = Vector2(0, 350)
+motion_scale = Vector2(0.7, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG/ParallaxLayer2"]
+scale = Vector2(3, 3)
+texture = ExtResource("3_o6wrs")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BG"]
+position = Vector2(0, 500)
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer3"]
+scale = Vector2(3, 3)
+texture = ExtResource("4_3cgg1")
+centered = false

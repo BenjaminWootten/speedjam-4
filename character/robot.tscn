@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://dpiubspm00q5b"]
 
-[ext_resource type="Script" path="res://robot.gd" id="1_ypht3"]
+[ext_resource type="Script" path="res://character/robot.gd" id="1_ypht3"]
 [ext_resource type="Texture2D" uid="uid://cy77t35lta43l" path="res://assets/robot/robot_idle1.png" id="3_np5n5"]
 [ext_resource type="Texture2D" uid="uid://co3p1pggk3td8" path="res://assets/robot/robot_walk.png" id="4_u4mtg"]
-[ext_resource type="PackedScene" uid="uid://clto83m3jbc1q" path="res://grapple.tscn" id="5_d5l8x"]
+[ext_resource type="PackedScene" uid="uid://clto83m3jbc1q" path="res://character/grapple.tscn" id="5_d5l8x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dlijt"]
 atlas = ExtResource("3_np5n5")
