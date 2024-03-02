@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://clto83m3jbc1q"]
+[gd_scene load_steps=4 format=3 uid="uid://clto83m3jbc1q"]
 
 [ext_resource type="Script" path="res://grapple.gd" id="1_xok74"]
 [ext_resource type="Texture2D" uid="uid://cfpq1lnovgk8q" path="res://assets/robot/robot_hand.png" id="2_858tj"]
+[ext_resource type="Texture2D" uid="uid://cepmnvn0fewau" path="res://assets/UI/target.png" id="3_6t8q6"]
 
 [node name="grapple" type="Node2D"]
 script = ExtResource("1_xok74")
@@ -15,3 +16,7 @@ collision_mask = 2
 texture_filter = 1
 rotation = 1.5708
 texture = ExtResource("2_858tj")
+
+[node name="target" type="Sprite2D" parent="."]
+modulate = Color(0.882353, 0, 1, 0.278431)
+texture = ExtResource("3_6t8q6")
