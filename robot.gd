@@ -3,12 +3,11 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 @onready var grapple = $grapple
 
-const MAX_SPEED = 800.0
+const MAX_SPEED = 400.0
 const ACCELERATION = 20.0
 const DECELERATION = 50.0
 const JUMP_VELOCITY = -600.0
-const GRAPPLE_ACCELERATION = 40.0
-const GRAPPLE_VELOCITY = 10.0
+const GRAPPLE_VELOCITY = 0.99
 
 var grappling = false
 var grapple_point
@@ -30,6 +29,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("grapple"):
 		# If grappling ray collides, initiate grapple
 		var collision = grapple.get_ray_collision_point()
+		velocity.y += 1
 		if collision:
 			grappling = true
 			grapple_point = collision
@@ -41,6 +41,7 @@ func _physics_process(delta):
 	
 	if grappling:
 		swing(delta)
+		velocity *= GRAPPLE_VELOCITY
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -63,7 +64,7 @@ func _physics_process(delta):
 
 func swing(delta):
 	var radius = global_position - grapple_point
-	if radius.length() > 10 and velocity.length() > 0.01:
+	if radius.length() > 30 and velocity.length() > 0.01:
 		var angle = acos(radius.dot(velocity) / (radius.length() * velocity.length()))
 		var rad_vel = cos(angle) * velocity.length()
 		velocity += radius.normalized() * -rad_vel
@@ -72,3 +73,5 @@ func swing(delta):
 			global_position = grapple_point + radius.normalized() * grapple_length
 		
 		velocity += (grapple_point - global_position).normalized() * 15000 * delta
+	else:
+		velocity = Vector2(0,0)
