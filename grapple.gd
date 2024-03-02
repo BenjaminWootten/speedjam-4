@@ -4,7 +4,6 @@ extends Node2D
 @onready var target = $target
 @onready var line = $Line2D
 @onready var hook_sprite = $hook
-@onready var animation_player = $AnimationPlayer
 
 const MAX_RAY_LENGTH = 400
 const ANIMATION_SPEED = 10
@@ -12,7 +11,7 @@ const ANIMATION_SPEED = 10
 var moveable = true
 var target_position
 
-func _process(delta):
+func _physics_process(_delta):
 	if moveable:
 		# Animate hook to return to player
 		hook_sprite.global_position.x = move_toward(hook_sprite.global_position.x, self.global_position.x, ANIMATION_SPEED)
