@@ -1,11 +1,17 @@
 extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var grapple = $grapple
 
 const MAX_SPEED = 800.0
 const ACCELERATION = 20.0
 const DECELERATION = 50.0
 const JUMP_VELOCITY = -600.0
+const GRAPPLE_ACCELERATION = 40.0
+const GRAPPLE_VELOCITY = 400.0
+
+var grappling = false
+var grapple_point
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -21,7 +27,17 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("grapple"):
-		pass
+		# If grappling ray collides, grapple
+		var collision = grapple.get_ray_collision_point()
+		if collision:
+			grappling = true
+			grapple_point = collision
+	
+	if Input.is_action_just_released("grapple"):
+		grappling = false
+	
+	if grappling:
+		var grapple_direction = Vector2(sign(grapple_point.x - self.position.x),  sign(self.position.y - grapple_point.y))
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -36,8 +52,9 @@ func _physics_process(delta):
 				sprite.flip_h = false
 			else:
 				sprite.flip_h = true
-	else:
+	elif grappling == false:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION)
 		sprite.play("default")
 	
 	move_and_slide()
+

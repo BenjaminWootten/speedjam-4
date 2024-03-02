@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://clto83m3jbc1q"]
+[gd_scene load_steps=3 format=3 uid="uid://clto83m3jbc1q"]
 
 [ext_resource type="Script" path="res://grapple.gd" id="1_xok74"]
+[ext_resource type="Texture2D" uid="uid://cfpq1lnovgk8q" path="res://assets/robot_hand.png" id="2_rf8ke"]
 
 [node name="grapple" type="Node2D"]
 script = ExtResource("1_xok74")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(0, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("2_rf8ke")
