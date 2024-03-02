@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd148tr2cjqxa"]
+
+[ext_resource type="Texture2D" uid="uid://cjwl8hej450vw" path="res://assets/level/buildings/blackbuildingtile.png" id="1_4qcr4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkss3"]
+size = Vector2(48, 96)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4qcr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jkss3")
