@@ -18,5 +18,5 @@ rotation = 1.5708
 texture = ExtResource("2_858tj")
 
 [node name="target" type="Sprite2D" parent="."]
-modulate = Color(0.882353, 0, 1, 0.278431)
+modulate = Color(0.882353, 0, 1, 0.537255)
 texture = ExtResource("3_6t8q6")
