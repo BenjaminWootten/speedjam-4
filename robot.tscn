@@ -104,10 +104,8 @@ script = ExtResource("1_ypht3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_cb5vl")
-animation = &"idle1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_2388t")
 
