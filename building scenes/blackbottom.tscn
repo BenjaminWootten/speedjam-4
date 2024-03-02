@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpjod2qyc33yr"]
+
+[ext_resource type="Texture2D" uid="uid://diywcp415jbyi" path="res://assets/level/buildings/blackbottom.png" id="1_3vlwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxpmh"]
+size = Vector2(48, 15)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3vlwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hxpmh")

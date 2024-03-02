@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://n1gbr5cvcq6g"]
+
+[ext_resource type="Texture2D" uid="uid://cqidrnotpxvk6" path="res://assets/level/buildings/bluetop.png" id="1_2nsae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jadn1"]
+size = Vector2(12, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b2y1"]
+size = Vector2(2, 13)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_2nsae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 4.5)
+shape = SubResource("RectangleShape2D_jadn1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(16, 0.5)
+shape = SubResource("RectangleShape2D_5b2y1")
