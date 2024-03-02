@@ -28,7 +28,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("grapple"):
-		# If grappling ray collides, grapple
+		# If grappling ray collides, initiate grapple
 		var collision = grapple.get_ray_collision_point()
 		if collision:
 			grappling = true
@@ -37,6 +37,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("grapple"):
 		grappling = false
+		grapple.release_grapple()
 	
 	if grappling:
 		swing(delta)

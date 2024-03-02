@@ -19,6 +19,7 @@ drag_horizontal_enabled = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(557, 597)
 scale = Vector2(4.44, 2)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_od1j2")
@@ -33,6 +34,7 @@ texture = ExtResource("2_58my3")
 position = Vector2(1481, 278)
 rotation = 1.5708
 scale = Vector2(1.69953, -2.02094)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource("RectangleShape2D_od1j2")
@@ -46,6 +48,7 @@ texture = ExtResource("2_58my3")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(171, 328)
 scale = Vector2(0.460346, -1.69316)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource("RectangleShape2D_od1j2")
@@ -59,6 +62,7 @@ texture = ExtResource("2_58my3")
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(821, 328)
 scale = Vector2(0.460346, -1.69316)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 shape = SubResource("RectangleShape2D_od1j2")
@@ -70,3 +74,4 @@ scale = Vector2(17.7344, 1)
 texture = ExtResource("2_58my3")
 
 [node name="Area2D" parent="." instance=ExtResource("3_bkoy2")]
+visible = false
