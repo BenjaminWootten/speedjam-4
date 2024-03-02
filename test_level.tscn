@@ -1,17 +1,49 @@
-[gd_scene load_steps=11 format=3 uid="uid://dthmyky8xonc0"]
+[gd_scene load_steps=16 format=3 uid="uid://dthmyky8xonc0"]
 
 [ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://robot.tscn" id="1_enb35"]
 [ext_resource type="Texture2D" uid="uid://8v1m6ycd3r4u" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer01.png" id="2_4cybm"]
 [ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/level/black_box.png" id="2_58my3"]
-[ext_resource type="Script" path="res://BGy.gd" id="2_axkk0"]
 [ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="3_8y8m1"]
 [ext_resource type="PackedScene" uid="uid://c8fbbud4fruog" path="res://rising_water.tscn" id="3_bkoy2"]
-[ext_resource type="Script" path="res://BG.gd" id="4_oc8ci"]
 [ext_resource type="Texture2D" uid="uid://b7b3ifk8b1mxe" path="res://assets/level/background/SCS_Skyline_Daytime_Layer03.png" id="5_vxnxd"]
 [ext_resource type="Texture2D" uid="uid://cqwa3c6jdhjsx" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer02.png" id="6_fdu22"]
+[ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="8_1cwee"]
+[ext_resource type="PackedScene" uid="uid://cd148tr2cjqxa" path="res://building scenes/blackbuildingtile.tscn" id="9_8io2j"]
+[ext_resource type="PackedScene" uid="uid://bpjod2qyc33yr" path="res://building scenes/blackbottom.tscn" id="10_cf80q"]
+[ext_resource type="PackedScene" uid="uid://d2j1oaurn72s4" path="res://building scenes/bluebuildingtile.tscn" id="11_r788p"]
+[ext_resource type="PackedScene" uid="uid://bkt8yi6s2tm1m" path="res://building scenes/bluebottom.tscn" id="12_1is54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_od1j2"]
 size = Vector2(426, 27)
+
+[sub_resource type="GDScript" id="GDScript_2o65a"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.y-=20*delta
+"
+
+[sub_resource type="GDScript" id="GDScript_0b0s2"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.x-=20*delta
+"
 
 [node name="test_level" type="Node2D"]
 
@@ -40,60 +72,87 @@ texture = ExtResource("2_58my3")
 [node name="Area2D" parent="." instance=ExtResource("3_bkoy2")]
 visible = false
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(258, 97)
-scale = Vector2(6.01898, -1.69316)
-collision_layer = 3
+[node name="Background" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(114.369, -116.995)
-shape = SubResource("RectangleShape2D_od1j2")
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+script = SubResource("GDScript_2o65a")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-texture_filter = 1
-position = Vector2(114.619, -116.995)
-scale = Vector2(17.7344, 1)
-texture = ExtResource("2_58my3")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource("2_axkk0")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/ParallaxBackground"]
 motion_mirroring = Vector2(1920, 2880)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer4"]
 texture = ExtResource("3_8y8m1")
 centered = false
 
-[node name="BG" type="ParallaxBackground" parent="."]
-script = ExtResource("4_oc8ci")
+[node name="BG" type="ParallaxBackground" parent="Background"]
+script = SubResource("GDScript_0b0s2")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/BG"]
 position = Vector2(0, 200)
 motion_scale = Vector2(0.4, 0.1)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D3" type="Sprite2D" parent="BG/ParallaxLayer"]
+[node name="Sprite2D3" type="Sprite2D" parent="Background/BG/ParallaxLayer"]
 scale = Vector2(3, 3)
 texture = ExtResource("5_vxnxd")
 centered = false
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/BG"]
 position = Vector2(0, 350)
 motion_scale = Vector2(0.7, 0.1)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D2" type="Sprite2D" parent="BG/ParallaxLayer2"]
+[node name="Sprite2D2" type="Sprite2D" parent="Background/BG/ParallaxLayer2"]
 scale = Vector2(3, 3)
 texture = ExtResource("6_fdu22")
 centered = false
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="BG"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/BG"]
 position = Vector2(0, 500)
-motion_scale = Vector2(1, 0)
+motion_scale = Vector2(1, 0.1)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer3"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/BG/ParallaxLayer3"]
 scale = Vector2(3, 3)
 texture = ExtResource("2_4cybm")
 centered = false
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="rightwall" type="Node2D" parent="Walls"]
+position = Vector2(2200, 0)
+
+[node name="top" parent="Walls/rightwall" instance=ExtResource("8_1cwee")]
+position = Vector2(195, -2621)
+
+[node name="1" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
+position = Vector2(192, 121)
+
+[node name="2" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
+position = Vector2(192, -2181)
+
+[node name="3" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
+position = Vector2(192, -1415)
+
+[node name="4" parent="Walls/rightwall" instance=ExtResource("9_8io2j")]
+position = Vector2(192, -647)
+
+[node name="bottom" parent="Walls/rightwall" instance=ExtResource("10_cf80q")]
+position = Vector2(192, 564)
+
+[node name="leftwall" type="Node2D" parent="Walls"]
+
+[node name="1" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
+position = Vector2(-121, 120)
+
+[node name="2" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
+position = Vector2(-121, 120)
+
+[node name="3" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
+position = Vector2(-121, 120)
+
+[node name="4" parent="Walls/leftwall" instance=ExtResource("11_r788p")]
+position = Vector2(-121, 120)
+
+[node name="bottom" parent="Walls/leftwall" instance=ExtResource("12_1is54")]
+position = Vector2(-121, 572)
