@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfgcucfbymw76"]
+
+[ext_resource type="Script" path="res://UI/timer.gd" id="1_6fcgh"]
+[ext_resource type="FontFile" uid="uid://yg6phltlm06g" path="res://assets/UI/Retro Gaming.ttf" id="1_iwijx"]
+
+[sub_resource type="Theme" id="Theme_lxxtf"]
+default_font = ExtResource("1_iwijx")
+default_font_size = 22
+
+[node name="Panel" type="Panel"]
+offset_left = 12.0
+offset_top = 16.0
+offset_right = 182.0
+offset_bottom = 44.0
+
+[node name="timer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 167.0
+offset_bottom = 28.0
+theme = SubResource("Theme_lxxtf")
+text = "00 : 00 : 000"
+script = ExtResource("1_6fcgh")
