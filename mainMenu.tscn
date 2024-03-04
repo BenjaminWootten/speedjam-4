@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://s3p70aqgy6h2"]
+
+[ext_resource type="Script" path="res://mainMenu.gd" id="1_jkylh"]
+[ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="2_ntyoc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkylh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(688, 962)
+scale = Vector2(0.714583, 0.714583)
+texture = ExtResource("2_ntyoc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 513.0
+offset_right = 759.0
+offset_bottom = 969.0
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 208.0
+offset_right = 820.0
+offset_bottom = 324.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 275.0
+offset_bottom = 114.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Luh Game
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dv4tvy8k2u6j5"]
+[gd_scene load_steps=16 format=3 uid="uid://dv4tvy8k2u6j5"]
 
-[ext_resource type="PackedScene" path="res://robot.tscn" id="1_enb35"]
+[ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://character/robot.tscn" id="1_enb35"]
 [ext_resource type="Texture2D" uid="uid://8v1m6ycd3r4u" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer01.png" id="2_4cybm"]
-[ext_resource type="Texture2D" uid="uid://d1muqgc0vrr62" path="res://assets/level/black_box.png" id="2_58my3"]
 [ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="3_8y8m1"]
-[ext_resource type="PackedScene" path="res://rising_water.tscn" id="3_bkoy2"]
+[ext_resource type="PackedScene" uid="uid://c8fbbud4fruog" path="res://level resources/rising_water.tscn" id="3_bkoy2"]
 [ext_resource type="Texture2D" uid="uid://b7b3ifk8b1mxe" path="res://assets/level/background/SCS_Skyline_Daytime_Layer03.png" id="5_vxnxd"]
 [ext_resource type="Texture2D" uid="uid://cqwa3c6jdhjsx" path="res://assets/level/background/SCS_Skyline_Nighttime_Layer02.png" id="6_fdu22"]
 [ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="8_1cwee"]
@@ -68,7 +67,6 @@ shape = SubResource("RectangleShape2D_od1j2")
 texture_filter = 1
 position = Vector2(117.942, -327.252)
 scale = Vector2(17.7344, 1)
-texture = ExtResource("2_58my3")
 
 [node name="Area2D" parent="." instance=ExtResource("3_bkoy2")]
 visible = false
