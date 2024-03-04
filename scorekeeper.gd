@@ -2,6 +2,9 @@ extends Node
 
 const SAVE_PATH = "user://times.save"
 
+var time = 0
+var timer_on = false
+
 class Score:
 	var name: String
 	var score: String
