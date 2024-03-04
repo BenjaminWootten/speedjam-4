@@ -81,3 +81,11 @@ func swing(delta):
 func _on_rising_water_body_entered(body):
 	position = START_POSITION
 	velocity = Vector2.ZERO
+
+
+func _on_static_body_2d_body_entered(body):
+	pass
+
+
+func _on_static_body_2d_2_body_entered(body):
+	pass # Replace with function body.
