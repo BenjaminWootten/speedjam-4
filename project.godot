@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="speedjam 4"
-run/main_scene="res://levels/level_1.tscn"
+run/main_scene="res://UI/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,6 @@ Scorekeeper="*res://scorekeeper.gd"
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
-window/size/resizable=false
 window/stretch/mode="viewport"
 
 [input]
