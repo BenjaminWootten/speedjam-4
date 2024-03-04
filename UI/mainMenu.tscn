@@ -45,10 +45,10 @@ text = "Quit"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 208.0
-offset_right = 895.0
-offset_bottom = 324.0
+offset_left = 419.0
+offset_top = 231.0
+offset_right = 931.0
+offset_bottom = 347.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0
@@ -63,7 +63,7 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_1d2al")
 theme_override_font_sizes/font_size = 66
-text = "Luh Game
+text = "Grapple Bot
 "
 horizontal_alignment = 1
 
