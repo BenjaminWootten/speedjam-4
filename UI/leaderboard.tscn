@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbksj4is55eiy"]
+[gd_scene load_steps=4 format=3 uid="uid://cuesfhdqcgsmt"]
 
 [ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="1_5jy0l"]
 [ext_resource type="Script" path="res://UI/leaderboard.gd" id="1_ahuv6"]

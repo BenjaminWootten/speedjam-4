@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://drq6bahjmbbjj"]
+[gd_scene load_steps=15 format=3 uid="uid://nb7fvdvtrs5p"]
 
-[ext_resource type="PackedScene" uid="uid://cycctgwi2cg02" path="res://level resources/platforms.tscn" id="1_7f1qb"]
+[ext_resource type="PackedScene" uid="uid://c1a5fbmm5j360" path="res://level resources/platforms.tscn" id="1_7f1qb"]
 [ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://character/robot.tscn" id="2_ha6w1"]
 [ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="3_a5pkb"]
 [ext_resource type="PackedScene" uid="uid://cd148tr2cjqxa" path="res://building scenes/blackbuildingtile.tscn" id="4_unc5c"]

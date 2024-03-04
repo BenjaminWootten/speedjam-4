@@ -1,14 +1,14 @@
 extends Control
 
+@onready var scorekeeper = Scorekeeper
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	var data = scorekeeper.load_data()
+	$MarginContainer/VBoxContainer/MarginContainer2/time1.text = data[0].formatted_time
+	$MarginContainer/VBoxContainer/MarginContainer3/time2.text = data[1].formatted_time
+	$MarginContainer/VBoxContainer/MarginContainer4/time3.text = data[2].formatted_time
+	$MarginContainer/VBoxContainer/MarginContainer5/time4.text = data[3].formatted_time
+	$MarginContainer/VBoxContainer/MarginContainer6/time5.text = data[4].formatted_time
 
 
 func _on_button_pressed():

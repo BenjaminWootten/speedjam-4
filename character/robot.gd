@@ -9,6 +9,7 @@ const DECELERATION = 50.0
 const JUMP_VELOCITY = -600.0
 const GRAPPLE_VELOCITY = 0.99
 @onready var START_POSITION = position
+@onready var scorekeeper = Scorekeeper
 
 var grappling = false
 var grapple_point
@@ -17,6 +18,9 @@ var grapple_length
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+
+func _ready():
+	scorekeeper.timer_on = true
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -82,10 +86,10 @@ func _on_rising_water_body_entered(body):
 	position = START_POSITION
 	velocity = Vector2.ZERO
 
-
 func _on_static_body_2d_body_entered(body):
-	pass
-
+	scorekeeper.save_score()
+	get_tree().change_scene_to_file("res://UI/leaderboard.tscn")
 
 func _on_static_body_2d_2_body_entered(body):
-	pass # Replace with function body.
+	scorekeeper.save_score()
+	get_tree().change_scene_to_file("res://UI/leaderboard.tscn")
