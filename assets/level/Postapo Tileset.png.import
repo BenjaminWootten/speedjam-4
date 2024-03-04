@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1muqgc0vrr62"
-path="res://.godot/imported/black_box.png-bc5a392727081b737f1d15e13e19a9f2.ctex"
+uid="uid://qiegnl28ut8h"
+path="res://.godot/imported/Postapo Tileset.png-4a1f3f3ac1129811b903a85024b6be48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/black_box.png"
-dest_files=["res://.godot/imported/black_box.png-bc5a392727081b737f1d15e13e19a9f2.ctex"]
+source_file="res://assets/level/Postapo Tileset.png"
+dest_files=["res://.godot/imported/Postapo Tileset.png-4a1f3f3ac1129811b903a85024b6be48.ctex"]
 
 [params]
 

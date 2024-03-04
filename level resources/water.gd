@@ -1,11 +1,8 @@
 extends Area2D
 
-const RISE_SPEED=.1
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+const RISE_ACCELERATION=0.0001
+var rise_speed = 0.1
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	position.y-=RISE_SPEED
+	rise_speed += RISE_ACCELERATION
+	position.y -= rise_speed

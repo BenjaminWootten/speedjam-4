@@ -5,7 +5,7 @@ extends Node2D
 @onready var line = $Line2D
 @onready var hook_sprite = $hook
 
-const MAX_RAY_LENGTH = 400
+const MAX_RAY_LENGTH = 300
 const ANIMATION_SPEED = 10
 
 var moveable = true
