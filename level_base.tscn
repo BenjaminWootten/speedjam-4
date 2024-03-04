@@ -70,15 +70,8 @@ position = Vector2(-121, 572)
 
 [node name="Background" parent="." instance=ExtResource("9_xsrb3")]
 
-[node name="Water" type="Node2D" parent="."]
-
-[node name="rising_water" parent="Water" instance=ExtResource("10_7gna0")]
-
-[node name="rising_water3" parent="Water" instance=ExtResource("10_7gna0")]
-position = Vector2(-2688, 0)
-
-[node name="rising_water2" parent="Water" instance=ExtResource("10_7gna0")]
-position = Vector2(2688, 0)
+[node name="rising_water" parent="." instance=ExtResource("10_7gna0")]
+collision_mask = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -88,3 +81,6 @@ offset_top = 31.0
 offset_right = 202.0
 offset_bottom = 59.0
 metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="rising_water" to="robot" method="_on_rising_water_body_entered"]
+[connection signal="body_entered" from="rising_water" to="rising_water" method="_on_body_entered"]

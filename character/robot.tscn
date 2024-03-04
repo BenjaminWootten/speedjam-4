@@ -119,7 +119,7 @@ radius = 9.0
 
 [node name="robot" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-collision_layer = 0
+collision_layer = 4
 script = ExtResource("1_ypht3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

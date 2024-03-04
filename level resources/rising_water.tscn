@@ -14,13 +14,14 @@ script = ExtResource("3_251ui")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(865, 1026.25)
+scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_tqv0d")
 
 [node name="water bottom" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.560784)
 texture_filter = 1
 position = Vector2(865, 6455)
-scale = Vector2(84, 347.875)
+scale = Vector2(254.04, 347.875)
 texture = ExtResource("3_md4le")
 
 [node name="water surface" type="Node2D" parent="."]
@@ -107,4 +108,172 @@ texture = ExtResource("4_myahu")
 modulate = Color(1, 1, 1, 0.560784)
 texture_filter = 1
 position = Vector2(-383, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D15" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-2111, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D16" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-2303, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D17" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-2495, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D18" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-2687, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D19" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-1343, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D20" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-1151, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D21" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-959, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D22" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-575, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D23" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-767, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D24" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-1535, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D25" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-1727, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D26" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-1919, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D27" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-2879, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D28" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(-3071, 867)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D29" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(3265, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D30" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(3073, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D31" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(2881, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D32" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(2689, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D33" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(4033, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D34" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(4225, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D35" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(4417, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D36" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(4801, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D37" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(4609, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D38" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(3841, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D39" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(3649, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D40" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(3457, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D41" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(2497, 869)
+texture = ExtResource("4_myahu")
+
+[node name="Sprite2D42" type="Sprite2D" parent="water surface"]
+modulate = Color(1, 1, 1, 0.560784)
+texture_filter = 1
+position = Vector2(2305, 869)
 texture = ExtResource("4_myahu")

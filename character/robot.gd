@@ -8,6 +8,7 @@ const ACCELERATION = 20.0
 const DECELERATION = 50.0
 const JUMP_VELOCITY = -600.0
 const GRAPPLE_VELOCITY = 0.99
+@onready var START_POSITION = position
 
 var grappling = false
 var grapple_point
@@ -75,3 +76,8 @@ func swing(delta):
 		velocity += (grapple_point - global_position).normalized() * 15000 * delta
 	else:
 		velocity = Vector2(0,0)
+
+
+func _on_rising_water_body_entered(body):
+	position = START_POSITION
+	velocity = Vector2.ZERO
