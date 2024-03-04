@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbksj4is55eiy"]
+
+[ext_resource type="Texture2D" uid="uid://c570gfq5ygvyy" path="res://assets/level/background/skyground.png" id="1_5jy0l"]
+[ext_resource type="Script" path="res://UI/leaderboard.gd" id="1_ahuv6"]
+[ext_resource type="FontFile" uid="uid://yg6phltlm06g" path="res://assets/UI/Retro Gaming.ttf" id="2_3l1mb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahuv6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(688, 962)
+scale = Vector2(0.714583, 0.714583)
+texture = ExtResource("1_5jy0l")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 200.0
+offset_right = 668.0
+offset_bottom = 516.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="time1" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 44
+text = "Winner!"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="time2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 44
+text = "Winner!"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="time3" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 44
+text = "Winner!"
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+
+[node name="time4" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 44
+text = "Winner!"
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+
+[node name="time5" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 44
+text = "Winner!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 185.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("2_3l1mb")
+theme_override_font_sizes/font_size = 55
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

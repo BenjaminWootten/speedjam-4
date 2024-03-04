@@ -16,4 +16,8 @@ func _on_start_pressed():
 
 
 func _on_quit_pressed():
-	pass # Replace with function body.
+	get_tree().quit() # Replace with function body.
+
+
+func _on_leader_pressed():
+	get_tree().change_scene_to_file("res://UI/leaderboard.tscn")
