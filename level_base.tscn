@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://nb7fvdvtrs5p"]
+
+[ext_resource type="PackedScene" uid="uid://c1a5fbmm5j360" path="res://level resources/platforms.tscn" id="1_7f1qb"]
+[ext_resource type="PackedScene" uid="uid://dpiubspm00q5b" path="res://character/robot.tscn" id="2_ha6w1"]
+[ext_resource type="PackedScene" uid="uid://ttxk88pw1qvf" path="res://building scenes/blacktop.tscn" id="3_a5pkb"]
+[ext_resource type="PackedScene" uid="uid://cd148tr2cjqxa" path="res://building scenes/blackbuildingtile.tscn" id="4_unc5c"]
+[ext_resource type="PackedScene" uid="uid://bpjod2qyc33yr" path="res://building scenes/blackbottom.tscn" id="5_n8p64"]
+[ext_resource type="PackedScene" uid="uid://n1gbr5cvcq6g" path="res://building scenes/bluetop.tscn" id="6_uoa7x"]
+[ext_resource type="PackedScene" uid="uid://d2j1oaurn72s4" path="res://building scenes/bluebuildingtile.tscn" id="7_u68mn"]
+[ext_resource type="PackedScene" uid="uid://bkt8yi6s2tm1m" path="res://building scenes/bluebottom.tscn" id="8_hsi2i"]
+[ext_resource type="PackedScene" uid="uid://bnwgh14f16e7p" path="res://level resources/background.tscn" id="9_xsrb3"]
+[ext_resource type="PackedScene" uid="uid://c8fbbud4fruog" path="res://level resources/rising_water.tscn" id="10_7gna0"]
+[ext_resource type="PackedScene" uid="uid://cfgcucfbymw76" path="res://UI/timer.tscn" id="11_6t81p"]
+
+[node name="level_base" type="Node2D"]
+
+[node name="platforms" parent="." instance=ExtResource("1_7f1qb")]
+layer_0/tile_data = PackedInt32Array(720891, 65536, 0, 720892, 65536, 0, 720893, 65536, 0, 720894, 65536, 0, 720895, 65536, 0, 655360, 65536, 0, 655361, 65536, 0, 655362, 65536, 0, 655363, 65536, 0, 655364, 65536, 0, 655365, 65536, 0, 655366, 65536, 0, 655367, 65536, 0, 655368, 65536, 0, 655369, 65536, 0, 655370, 65536, 0, 655371, 65536, 0, 655372, 65536, 0, 655373, 65536, 0, 655374, 65536, 0, 655375, 65536, 0, 655376, 65536, 0, 655377, 65536, 0, 655378, 65536, 0, 655379, 65536, 0, 655380, 65536, 0, 655381, 65536, 0, 655382, 65536, 0, 655383, 65536, 0, 655384, 65536, 0, 655385, 65536, 0, 655386, 65536, 0, 655387, 65536, 0, 655388, 65536, 0, 655389, 65536, 0, 655390, 65536, 0, 655391, 65536, 0, 655392, 65536, 0, 655393, 65536, 0, 655394, 65536, 0, 720890, 65536, 0, 720889, 65536, 0, 720888, 65536, 0, 720887, 65536, 0, 655395, 65536, 0, 655396, 65536, 0, 655397, 65536, 0, 655398, 65536, 0, 655399, 65536, 0, 655400, 65536, 0, 655401, 65536, 0, 655402, 65536, 0, 720886, 65536, 0, 720885, 65536, 0, -2555875, 65536, 3)
+
+[node name="robot" parent="." instance=ExtResource("2_ha6w1")]
+position = Vector2(786, 554)
+
+[node name="Camera2D" type="Camera2D" parent="robot"]
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(0, 16)
+
+[node name="rightwall" type="Node2D" parent="Walls"]
+position = Vector2(1865, -7)
+
+[node name="top" parent="Walls/rightwall" instance=ExtResource("3_a5pkb")]
+position = Vector2(195, -2616)
+
+[node name="1" parent="Walls/rightwall" instance=ExtResource("4_unc5c")]
+position = Vector2(192, 128)
+
+[node name="2" parent="Walls/rightwall" instance=ExtResource("4_unc5c")]
+position = Vector2(192, -2176)
+
+[node name="3" parent="Walls/rightwall" instance=ExtResource("4_unc5c")]
+position = Vector2(192, -1408)
+
+[node name="4" parent="Walls/rightwall" instance=ExtResource("4_unc5c")]
+position = Vector2(192, -640)
+
+[node name="bottom" parent="Walls/rightwall" instance=ExtResource("5_n8p64")]
+position = Vector2(192, 572)
+
+[node name="leftwall" type="Node2D" parent="Walls"]
+
+[node name="top" parent="Walls/leftwall" instance=ExtResource("6_uoa7x")]
+position = Vector2(-126, -2616)
+
+[node name="1" parent="Walls/leftwall" instance=ExtResource("7_u68mn")]
+position = Vector2(-121, 128)
+
+[node name="2" parent="Walls/leftwall" instance=ExtResource("7_u68mn")]
+position = Vector2(-121, -2176)
+
+[node name="3" parent="Walls/leftwall" instance=ExtResource("7_u68mn")]
+position = Vector2(-121, -1408)
+
+[node name="4" parent="Walls/leftwall" instance=ExtResource("7_u68mn")]
+position = Vector2(-121, -640)
+
+[node name="bottom" parent="Walls/leftwall" instance=ExtResource("8_hsi2i")]
+position = Vector2(-121, 572)
+
+[node name="Background" parent="." instance=ExtResource("9_xsrb3")]
+
+[node name="Water" type="Node2D" parent="."]
+
+[node name="rising_water" parent="Water" instance=ExtResource("10_7gna0")]
+
+[node name="rising_water3" parent="Water" instance=ExtResource("10_7gna0")]
+position = Vector2(-2688, 0)
+
+[node name="rising_water2" parent="Water" instance=ExtResource("10_7gna0")]
+position = Vector2(2688, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" parent="CanvasLayer" instance=ExtResource("11_6t81p")]
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 202.0
+offset_bottom = 59.0
+metadata/_edit_use_anchors_ = true
