@@ -71,7 +71,7 @@ func swing(delta):
 	var radius = global_position - grapple_point
 	if radius.length() > 30 and velocity.length() > 0.01:
 		var angle = acos(radius.dot(velocity) / (radius.length() * velocity.length()))
-		var rad_vel = cos(angle) * velocity.length()
+		var rad_vel = cos(angle) * velocity.length() * 1.5
 		velocity += radius.normalized() * -rad_vel
 		
 		if global_position.distance_to(grapple_point) > grapple_length:

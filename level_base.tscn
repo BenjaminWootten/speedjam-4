@@ -129,6 +129,8 @@ script = ExtResource("12_c0jkl")
 
 [node name="StaticBody2D" type="Area2D" parent="Node2D"]
 position = Vector2(-81, 2611)
+collision_layer = 0
+collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D"]
 position = Vector2(126, 201)
@@ -141,6 +143,8 @@ shape = SubResource("RectangleShape2D_yjk6k")
 
 [node name="StaticBody2D2" type="Area2D" parent="Node2D"]
 position = Vector2(-81, 2611)
+collision_layer = 0
+collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D2"]
 position = Vector2(1994, 198)
